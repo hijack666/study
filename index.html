@@ -28,22 +28,44 @@
   <div class="arrive">
     <h2>Прибытие</h2>
     <div class="selector">
-      <input class="date-selector" type="button" value="  ДД.ММ.ГГГГ"><i class="material-icons">expand_more</i>
+      <input class="datepicker-here" type="text" data-multiple-dates="1" data-multiple-dates-separator=" - " data-position="bottom left" value="ДД.ММ.ГГГГ"><i class="material-icons">expand_more</i>
     </div>
   </div>
   <div class="send">
     <h2>Выезд</h2>
     <div class="selector">
-      <input class="date-selector" type="button" value="  ДД.ММ.ГГГГ"><i class="material-icons">expand_more</i>
+      <input class="datepicker-here" type="text" data-multiple-dates="1" data-multiple-dates-separator=" - " data-position="bottom right" value="ДД.ММ.ГГГГ"><i class="material-icons">expand_more</i>
     </div>
   </div>
   <div class="guests">
     <h2>Гости</h2>
-    <div class="selector">
-      <input class="guests-count" type="button" value="  Сколько гостей"><i class="material-icons last-arrow">expand_more</i>
+    <input class="dropbtn" type="text" id="dropbutton" value="Сколько гостей"><i class="material-icons">expand_more</i>
+    <div class="dropdown" id="myDropdown">
+      <div class="adult stepper">
+        <p class="ages">Взрослые</p>
+        <input class="minus" type="button" id="minus-adult" value="-">
+        <div class="stepper-input" id="adults">0</div>
+        <input class="plus" type="button" id="plus-adult" value="+">
+      </div>
+      <div class="kids stepper">
+        <p class="ages">Дети</p>
+        <input class="minus" type="button" id="minus-kid" value="-">
+        <div class="stepper-input" id="kids">0</div>
+        <input class="plus" type="button" id="plus-kid" value="+">
+      </div>
+      <div class="baby js-spinner stepper">
+        <p class="ages">Младенцы</p>
+        <input class="minus" type="button" id="minus-baby" value="-">
+        <div class="stepper-input" id="babys">0</div>
+        <input class="plus" type="button" id="plus-baby" value="+">
+      </div>
+      <div class="datepicker--buttons guestspicker"><span class="datepicker--button" id="clearbtn" data-action="clear">ОЧИСТИТЬ</span><span class="datepicker--button" id="acceptbtn">ПРИМЕНИТЬ</span></div>
     </div>
   </div><div class='btn-choose'>
-  <input class="choose" type="button" value="Подобрать номер"><i class="material-icons">arrow_forward</i>
+  <button class="choose"> 
+    <p class="btntext">ПОДОБРАТЬ НОМЕР </p>
+    <p class="material-icons">arrow_forward</p>
+  </button>
 </div>
 <p class="tagline">Лучшие номера для вашей работы,<br>			 отдыха и просто вдохновения</p>
       </div>
@@ -94,6 +116,6 @@
         <div class="social-btns"><a class="twitter" href="#">TW</a><a class="facebook" href="#">FB</a><a class="instagram" href="#">IN</a></div>
       </div>
     </div>
+    <script src="main.js"></script>
   </body>
-  <script src="main.js"></script>
 </html>
