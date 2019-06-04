@@ -19,13 +19,27 @@ body {
   margin: 0 auto;
   background-color: #e5e5e5; }
 
-.material-icons, .choose .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal; }
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  position: relative; }
 
-header {
-  font-family: 'Montserrat';
+header, .tagline, .about p, .navigation a, .about-us a, .support a, .subscription a, .subscription .send-email {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px; }
+
+.login-btn, .reg-btn, ul li .first-line {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase; }
+
+.material-icons, .selector::after, .choose .material-icons {
+  font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal; }
 
@@ -36,19 +50,26 @@ header {
   left: 0;
   z-index: 1;
   background-color: white;
-  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05); }
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  display: block; }
 
 .logo {
-  margin-top: 15px;
-  left: 0; }
+  float: left;
+  margin-top: 15px; }
+
+.response-space {
+  content: "";
+  width: 285px;
+  height: 20px;
+  float: left;
+  display: flex; }
 
 .menu-nav {
-  position: absolute;
+  display: flex;
+  float: left;
   width: 446px;
-  line-height: 115%;
-  top: 27px;
-  left: 531px;
-  margin: 0;
+  line-height: 17px;
+  margin-top: 26px;
   padding: 0;
   list-style: none; }
 
@@ -69,58 +90,47 @@ ul li a i {
 .lastlink a {
   margin-right: 0; }
 
-.btn .login-btn {
-  position: absolute;
-  display: inline-block;
-  top: 2px;
-  left: 2px;
-  width: 83px;
-  height: 30px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 10px;
-  text-transform: uppercase;
+.login-btn {
+  display: flex;
+  float: left;
+  width: 60px;
+  height: 34px;
+  cursor: pointer;
+  text-align: center;
+  align-content: center;
+  margin-left: 40px;
+  margin-top: 18px;
   color: #BC9CFF;
-  z-index: 4;
+  z-index: 10;
+  padding: 0;
   background-color: white;
-  border-radius: 22px;
   border: none; }
 
-.btn {
+.frame {
   position: absolute;
-  left: 997px;
-  top: 18px;
-  z-index: -2;
-  width: 87px;
-  height: 34px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  margin-left: -20px;
+  margin-top: -9px; }
 
 .reg-btn {
-  position: absolute;
+  display: flex;
+  float: left;
+  padding-left: 20px;
   width: 196px;
   height: 34px;
-  left: 1104px;
-  top: 18px;
+  margin-right: 0;
+  margin-left: 26px;
+  margin-top: 18px;
+  cursor: pointer;
   color: white;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
   font-size: 11px;
-  line-height: 12px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
   border: none; }
 
 main {
-  position: absolute;
-  top: 0;
   width: 1440px;
-  margin-top: 0;
+  margin-top: -70px;
   z-index: 0;
   height: 900px;
   background-image: url(img/image3.png); }
@@ -323,9 +333,10 @@ main {
   font-family: Montserrat;
   font-size: 14px;
   color: #4a4a4a;
-  width: 320px;
+  width: 318px;
   position: absolute;
   left: -100000px;
+  margin-top: -6px;
   opacity: 0;
   transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s;
@@ -536,25 +547,18 @@ main {
   margin-top: 17px; }
 
 .tagline {
-  display: block;
+  z-index: 3;
   color: rgba(31, 32, 65, 0.75);
   position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 0;
-  margin: 0 134px 21px 0;
-  font-family: 'Montserrat';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 14px;
+  top: 830px;
+  right: -7px;
   line-height: 24px;
-  text-align: right;
-  width: 297px;
-  height: 48px; }
+  text-align: right; }
 
 .form {
+  position: absolute;
+  top: 140px;
   display: block;
-  margin-top: 140px;
   width: 380px;
   height: 374px;
   padding: 40px 30px 30px 30px;
@@ -591,8 +595,9 @@ main {
 .guests {
   display: block;
   margin: 0;
-  margin-top: 10px;
-  float: left; }
+  margin-top: 12px;
+  float: left;
+  z-index: 5; }
 
 .form h2 {
   font-family: Montserrat;
@@ -623,11 +628,24 @@ main {
   color: rgba(31, 32, 65, 0.75);
   cursor: pointer; }
 
+.selector::after {
+  content: "expand_more";
+  font-size: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  height: 40px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0;
+  margin-top: -42px;
+  margin-left: 115px; }
+
 .selector {
   cursor: pointer; }
 
 .dropbtn {
-  width: 320px;
+  width: 318px;
   height: 44px;
   background: white;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -643,29 +661,14 @@ main {
   color: rgba(31, 32, 65, 0.75);
   cursor: pointer; }
 
-.selector i {
-  position: relative;
-  left: 115px;
-  width: 44px;
-  height: 44px;
-  font-size: 24px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-top: -44px;
-  color: rgba(31, 32, 65, 0.5); }
-
 .dropdown {
   display: none;
   position: absolute;
-  left: 170px;
-  top: 409px;
+  top: 265px;
   height: 160px;
-  width: 320px;
-  margin-left: 1px;
+  width: 318px;
   background-color: white;
-  border: 1px solid rgba(31, 32, 65, 0.5);
+  border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-bottom-left-radius: 4px;
@@ -678,6 +681,7 @@ main {
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
+    z-index: 10;
     text-transform: uppercase;
     color: #1F2041;
     margin: 0;
@@ -685,40 +689,8 @@ main {
     vertical-align: middle; }
 
 .show {
-  display: block; }
-
-.btn-choose {
-  margin-top: 31px;
-  float: left; }
-
-.choose {
-  width: 320px;
-  height: 44px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 22px;
-  border: none;
-  vertical-align: middle; }
-  .choose .btntext {
-    float: left;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 11px;
-    line-height: 12px;
-    letter-spacing: 1px;
-    margin: 0;
-    width: 200px;
-    margin-top: 5px;
-    margin-left: 52px;
-    vertical-align: middle;
-    color: white; }
-  .choose .material-icons {
-    float: right;
-    margin: 0;
-    color: white;
-    font-size: 24px;
-    line-height: 24px;
-    margin-right: 5px; }
+  display: block;
+  z-index: 10; }
 
 .stepper {
   display: inline-flex; }
@@ -777,73 +749,95 @@ main {
   opacity: 0.5;
   cursor: default; }
 
-.footer {
-  position: relative;
-  top: 830px;
-  background-color: white;
-  height: 272px;
-  padding-top: 100px;
-  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1); }
+.btn-choose {
+  margin-top: 31px;
+  float: left; }
 
-.container {
-  width: 1160px;
-  margin: 0 auto; }
+.choose {
+  width: 320px;
+  height: 44px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  border: none;
+  vertical-align: middle; }
+  .choose .btntext {
+    float: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    margin: 0;
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 52px;
+    vertical-align: middle;
+    color: white; }
+  .choose .material-icons {
+    float: right;
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    line-height: 24px;
+    margin-right: 5px; }
 
 .footer .logo {
   margin-top: 0; }
 
 .about {
+  display: flex;
   width: 260px;
   height: 132px;
-  float: left; }
+  float: left;
+  flex-direction: column; }
+
+.about img {
+  float: left;
+  align-self: flex-start; }
 
 .about p {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
   line-height: 24px;
+  margin-top: 18px;
   color: rgba(31, 32, 65, 0.75); }
 
 .navigation {
+  display: flex;
   float: left;
   width: 144px;
   height: 168px;
   margin-left: 40px; }
 
 .about-us {
+  display: flex;
   float: left;
   width: 109px;
   height: 168px;
   margin-left: 58px; }
 
 .support {
+  display: flex;
   float: left;
   width: 150px;
   height: 130px;
   margin-left: 92px; }
 
 .subscription {
+  display: flex;
   float: left;
   width: 255px;
   height: 84px;
   margin-left: 48px; }
 
-.navigation ul, .about-us ul, .support ul {
+.navigation ul, .about-us ul, .support ul, .subscription ul {
   list-style: none;
   padding-left: 0;
   padding-right: 0;
-  font-size: 14px;
   line-height: 17px;
   margin-top: 4px; }
 
 .subscription ul {
-  list-style: none;
-  padding-left: 0;
-  padding-right: 0;
-  font-size: 14px;
-  line-height: 24px;
-  margin-top: 4px; }
+  line-height: 24px; }
 
 .navigation ul li, .about-us ul li, .support ul li {
   padding-bottom: 38px; }
@@ -854,18 +848,11 @@ main {
 .navigation a, .about-us a, .support a, .subscription a {
   text-decoration: none;
   margin-right: 0;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
   color: rgba(31, 32, 65, 0.5); }
 
 ul li .first-line {
-  font-weight: bold;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #1F2041;
-  line-height: 15px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  color: #1F2041; }
 
 .support ul li .first-line {
   letter-spacing: 0; }
@@ -877,10 +864,6 @@ ul li .first-line {
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
   line-height: 24px;
   padding-left: 15px; }
 
@@ -912,14 +895,20 @@ ul li .first-line {
   text-align: center;
   color: #8BA4F9; }
 
+.footer {
+  position: relative;
+  background-color: white;
+  min-height: 272px;
+  padding-top: 100px;
+  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1); }
+
 .copyright-bar {
   display: block;
   background-color: white;
   height: 70px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   z-index: -2;
-  position: relative;
-  top: 830px; }
+  position: relative; }
 
 .copyright-bar p {
   position: relative;
@@ -969,4 +958,44 @@ ul li .first-line {
   font-size: 20px;
   line-height: 20px;
   color: transparent; }
+
+@media screen and (max-device-width: 768px) and (min-device-width: 550px) {
+  body {
+    width: 100vw; }
+  main {
+    height: 900px;
+    width: 100%;
+    margin-bottom: -140px;
+    background-position: -336px; }
+  .container {
+    width: 95%;
+    margin: 0 auto; }
+  .form {
+    left: 70px; }
+  .container .tagline {
+    top: 90px;
+    right: 40px;
+    text-align: right;
+    width: 300px; }
+  .response-space {
+    width: 5vw; }
+  .footer {
+    padding-top: 30px; }
+    .footer .about {
+      margin-left: 30px; }
+    .footer .support {
+      margin-left: 70px; }
+    .footer .subscription {
+      display: block;
+      width: 750px;
+      margin-left: 30px; }
+      .footer .subscription ul li:nth-child(2) {
+        float: left; }
+      .footer .subscription .input-send {
+        float: right;
+        margin-top: -20px; }
+        .footer .subscription .input-send .send-email {
+          margin: 0; }
+    .footer .navigation ul li, .footer .about-us ul li, .footer .support ul li, .footer .subscription ul li {
+      padding-bottom: 30px; } }
 
